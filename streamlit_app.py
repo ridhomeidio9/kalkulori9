@@ -42,6 +42,10 @@ def main():
     if st.button("Hitung Kalori"):
         kalori = hitung_kalori(jenis_kelamin, berat, tinggi, usia, aktivitas)
         st.success(f"Kebutuhan kalori harian Anda adalah {kalori:.2f} kkal")
+        
+        st.info("\nTips: \n- Jika ingin menurunkan berat badan, konsumsi lebih sedikit kalori dari kebutuhan harian.\n- Jika ingin menambah berat badan, konsumsi lebih banyak kalori dari kebutuhan harian.\n- Pastikan pola makan seimbang dengan nutrisi yang cukup!")
 
 if __name__ == "__main__":
     main()
+
+
