@@ -5,26 +5,21 @@ st.write(
     "untuk menghitung kebutuhan kalori harian"
 )
 import streamlit as st
-
 def hitung_kalori(jenis_kelamin, berat, tinggi, usia, aktivitas):
     if jenis_kelamin == "Laki-laki":
         bmr = 88.36 + (13.4 * berat) + (4.8 * tinggi) - (5.7 * usia)
     else:
         bmr = 447.6 + (9.2 * berat) + (3.1 * tinggi) - (4.3 * usia)
-    
     faktor_aktivitas = {
         "Sedentary (Jarang olahraga)": 1.2,  # Tidak berolahraga atau sangat jarang bergerak
         "Lightly active (Olahraga ringan 1-3 hari/minggu)": 1.375,  # Olahraga ringan seperti berjalan atau yoga beberapa kali seminggu
         "Moderately active (Olahraga sedang 3-5 hari/minggu)": 1.55,  # Olahraga sedang seperti jogging atau bersepeda secara rutin
         "Very active (Olahraga berat 6-7 hari/minggu)": 1.725,  # Olahraga intens hampir setiap hari
     }
-    
     kalori_harian = bmr * faktor_aktivitas[aktivitas]
     return kalori_harian
-
 def main():
     st.title("Kalkulator Kalori Harian")
-    
     jenis_kelamin = st.selectbox("Jenis Kelamin", ["Laki-laki", "Perempuan"])
     berat = st.number_input("Berat Badan (kg)", min_value=1.0, step=0.1)
     tinggi = st.number_input("Tinggi Badan (cm)", min_value=50.0, step=0.1)
