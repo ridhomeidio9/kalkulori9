@@ -17,7 +17,6 @@ def hitung_kalori(jenis_kelamin, berat, tinggi, usia, aktivitas):
         "Lightly active (Olahraga ringan 1-3 hari/minggu)": 1.375,  # Olahraga ringan seperti berjalan atau yoga beberapa kali seminggu
         "Moderately active (Olahraga sedang 3-5 hari/minggu)": 1.55,  # Olahraga sedang seperti jogging atau bersepeda secara rutin
         "Very active (Olahraga berat 6-7 hari/minggu)": 1.725,  # Olahraga intens hampir setiap hari
-        "Super active (Atlet atau pekerjaan fisik berat)": 1.9  # Atlet profesional atau pekerja dengan aktivitas fisik sangat tinggi
     }
     
     kalori_harian = bmr * faktor_aktivitas[aktivitas]
