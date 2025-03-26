@@ -30,7 +30,6 @@ def main():
         "Lightly active (Olahraga ringan 1-3 hari/minggu)",
         "Moderately active (Olahraga sedang 3-5 hari/minggu)",
         "Very active (Olahraga berat 6-7 hari/minggu)",
-        "Super active (Atlet atau pekerjaan fisik berat)"
     ])
     
     if st.button("Hitung Kalori"):
